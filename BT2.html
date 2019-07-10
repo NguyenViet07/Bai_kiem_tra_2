@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let Rat = function (name, weight, speed, status, said) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+            this.said = said;
+            this.getName = function () {
+                return this.name;
+            };
+            this.setName = function (name) {
+                this.name = name;
+            };
+            this.getWeight = function () {
+                return this.weight;
+            };
+            this.setWeight = function (weight) {
+                this.weight = weight;
+            };
+            this.getSpeed = function () {
+                return this.speed;
+            };
+            this.setSpeed = function (speed) {
+                this.Speed = speed;
+            };
+            this.getStatus = function () {
+                return this.status;
+            };
+            this.setStatus = function (status) {
+                this.status = status;
+            };
+            this.getSaid = function () {
+                return this.said;
+            };
+            this.setSaid = function (said) {
+                this.said = said;
+            };
+        }
+        let Cat = function (name, weight, maxSpeed, said) {
+            this.name = name;
+            this.weight = weight;
+            this.maxSpeed = maxSpeed;
+            this.status = status;
+            this.said = said;
+            this.getName = function () {
+                return this.name;
+            };
+            this.setName = function (name) {
+                this.name = name;
+            };
+            this.getWeight = function () {
+                return this.weight;
+            };
+
+            this.setWeight = function (weight) {
+                this.weight = weight;
+            };
+            this.getMaxSpeed = function () {
+                return this.maxSpeed;
+            };
+            this.setMaxSpeed = function (maxSpeed) {
+                this.maxSpeed = maxSpeed;
+            };
+            this.getSaid = function () {
+                return this.said;
+            };
+            this.setSaid = function (said) {
+                this.said = said;
+            };
+            this.batChuot = function (rat) {
+                if (rat.speed<this.maxSpeed) {
+                    return true;
+                } else 
+                    return false;
+            }
+            this.eatRat = function (rat) {
+                if (this.batChuot = true){
+                    this.weight += rat.weight ;
+                } else return false ;
+                
+            }
+        }
+
+        let rat1= new Rat("dai", 100, 70 );
+        let cat1= new Cat("viet", 200,100 );
+        if (cat1.batChuot(rat1)) {
+            document.write(cat1.getName() + " bat dc " +rat1.getName())
+            cat1.eatRat(rat1)
+        }  else {
+            document.write(cat1.getName()+"khong bat dc "+ rat1.getName());
+        }
+        document.write("<br>"+cat1.getWeight());
+
+    </script>
+
+</body>
+</html>
